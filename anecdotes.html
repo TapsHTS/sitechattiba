@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anecdotes Intéressantes</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+                <a class="navbar-brand" href="index.html">
+      <img src="assets/logo.png" alt="L’Invention du Jeu Vidéo" height="30">
+    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="evolution.html">Évolution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="histoire.html">Histoire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="anecdotes.html">Anecdotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jeu.html">Mini-Jeu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h2>Anecdotes Intéressantes</h2>
+        
+        <!-- Table des Anecdotes -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Année</th>
+                    <th>Anecdote</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1958</td>
+                    <td>Contrairement à la croyance populaire, Pong n’est pas le tout premier jeu vidéo. Ce titre revient à <strong>Tennis for Two</strong>, créé en 1958 par le physicien William Higinbotham. Ce jeu, affiché sur un oscilloscope, permettait de simuler une partie de tennis en temps réel.</td>
+                    <td>
+                        <img src="assets/images/1958.jpg" alt="1958" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1958.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>1972</td>
+                    <td><strong>La naissance de Pong</strong> : Pong, l’un des premiers jeux vidéo à succès commercial, a été inspiré par le jeu Tennis for Two. Créé par Atari en 1972, Pong a marqué le début de l’industrie du jeu vidéo grand public.</td>
+                    <td>
+                        <img src="assets/images/1972_pong.jpg" alt="Pong" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1972_pong.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>1971</td>
+                    <td><strong>Le premier jeu d’arcade</strong> : Galaxy Game, sorti en 1971, est considéré comme le premier jeu d’arcade. Il s’agissait d’une reprogrammation du jeu Spacewar! de 1962, adaptée pour les bornes d’arcade.</td>
+                    <td><img src="assets/images/1971_galaxy_game.jpg" alt="Galaxy Game" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1971_galaxy_game.jpg"></td>
+                </tr>
+                <tr>
+                    <td>1972</td>
+                    <td><strong>La première console de salon</strong> : La Magnavox Odyssey, lancée en 1972, est reconnue comme la première console de jeux vidéo domestique. Elle permettait de jouer à des jeux simples sur un téléviseur, marquant le début de l’ère des consoles de salon.</td>
+                    <td><img src="assets/images/1972_magnavox_odyssey.jpg" alt="Magnavox Odyssey" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1972_magnavox_odyssey.jpg"></td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td><strong>Le jeu le plus vendu de tous les temps</strong> : Tetris, sorti en 1984, est le jeu vidéo le plus vendu de l’histoire, avec plus de 565 millions d’exemplaires écoulés à ce jour. Sa simplicité et son addictivité ont traversé les générations.</td>
+                    <td><img src="assets/images/1984_tetris.jpg" alt="Tetris" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1984_tetris.jpg"></td>
+                </tr>
+                <tr>
+                    <td>1985</td>
+                    <td><strong>La franchise la plus populaire</strong> : Super Mario, avec environ 680 millions d’exemplaires vendus à travers le monde, est la franchise de jeux vidéo la plus populaire. Le premier opus, <em>Super Mario Bros.</em>, est sorti en 1985 sur la NES.</td>
+                    <td><img src="assets/images/1985_super_mario_bros.jpg" alt="Super Mario Bros." class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/1985_super_mario_bros.jpg"></td>
+                </tr>
+                <tr>
+                    <td>2018</td>
+                    <td><strong>Le jeu vidéo le plus cher jamais créé</strong> : <em>Red Dead Redemption II</em>, sorti en 2018, est le jeu vidéo le plus coûteux jamais développé, avec un budget de plus de 800 millions de dollars. Cette somme a permis de créer un monde ouvert d’une richesse inégalée.</td>
+                    <td><img src="assets/images/2018_red_dead_redemption_ii.jpg" alt="Red Dead Redemption II" class="img-thumbnail clickable-image" width="50" height="50" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/images/2018_red_dead_redemption_ii.jpg"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Modal pour agrandir les images -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Agrandissement de l'image</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="" alt="Image agrandie" id="modalImage" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ajout du script pour changer l'image dans le modal -->
+    <script>
+        const imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            const img = event.relatedTarget;
+            const imageSrc = img.getAttribute('data-bs-image');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modalImage.alt = img.alt;
+        });
+    </script>
+</body>
+</html>
