@@ -1,162 +1,323 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <title>Évolution du Jeu Vidéo</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/ css-clement.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-        <a class="navbar-brand" href="index.html">
-      <img src="assets/logo.png" alt="L’Invention du Jeu Vidéo" height="30">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="evolution.html">Évolution</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="histoire.html">Histoire</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="anecdotes.html">Anecdotes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="jeu.html">Mini-Jeu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="article.html">Article</a>
-        </li>
-      </ul>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
-</nav>
-<main class="container my-5">
-  <h2>Évolution du Jeu Vidéo</h2>
+  <!-- ***** Preloader End ***** -->
 
-  <!-- Frise Chronologique -->
-  <section class="mb-5 fade-in">
-    <div class="timeline">
-      
-      <!-- 1958 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>1958</h3>
-          <p>Création de <strong>Tennis for Two</strong>, considéré comme l’un des premiers jeux vidéo.</p>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="L'Invention du Jeu Vidéo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="evolution.html" class="active">Évolution</a></li>
+                      <li><a href="histoire.html">Histoire</a></li>
+                      <li><a href="anecdotes.html">Anecdotes</a></li>
+                      <li><a href="jeu.html">Mini-Jeu</a></li>
+                       
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
         </div>
-      </div>
-      
-      <!-- 1962 -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>1962</h3>
-          <p>Développement de <strong>Spacewar!</strong>, l’un des premiers jeux vidéo interactifs sur ordinateur.</p>
-        </div>
-      </div>
-      
-      <!-- 1972 - Magnavox Odyssey -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>1972</h3>
-          <p>Lancement de la <strong>Magnavox Odyssey</strong>, la première console de jeux vidéo domestique.</p>
-        </div>
-      </div>
-      
-      <!-- 1972 - Atari Pong -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>1972</h3>
-          <p><strong>Atari</strong> distribue <strong>Pong</strong>, le premier jeu vidéo à rencontrer un véritable succès commercial.</p>
-        </div>
-      </div>
-      
-      <!-- 1977 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>1977</h3>
-          <p>Sortie de l’<strong>Atari VCS</strong>, plus tard renommée Atari 2600, une console emblématique de l’époque.</p>
-        </div>
-      </div>
-      
-      <!-- 1983 -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>1983</h3>
-          <p>Lancement de la <strong>Nintendo Entertainment System (NES)</strong>, marquant le début de l’ère des consoles modernes.</p>
-        </div>
-      </div>
-      
-      <!-- 1991 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>1991</h3>
-          <p>Sortie de <strong>Street Fighter II</strong>, un jeu de combat révolutionnaire qui a influencé de nombreux titres ultérieurs.</p>
-        </div>
-      </div>
-      
-      <!-- 1994 -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>1994</h3>
-          <p>Introduction de la <strong>PlayStation</strong> de Sony, entrant dans la compétition des consoles de salon.</p>
-        </div>
-      </div>
-      
-      <!-- 2000 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>2000</h3>
-          <p>Lancement de la <strong>PlayStation 2</strong>, la console la plus vendue de tous les temps.</p>
-        </div>
-      </div>
-      
-      <!-- 2006 -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>2006</h3>
-          <p>Sortie de la <strong>Nintendo Wii</strong>, innovant avec sa télécommande de détection de mouvement.</p>
-        </div>
-      </div>
-      
-      <!-- 2013 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>2013</h3>
-          <p>Lancement de la <strong>PlayStation 4</strong> et de la <strong>Xbox One</strong>, marquant la huitième génération de consoles.</p>
-        </div>
-      </div>
-      
-      <!-- 2017 -->
-      <div class="timeline-event right">
-        <div class="timeline-content">
-          <h3>2017</h3>
-          <p>Introduction de la <strong>Nintendo Switch</strong>, une console hybride révolutionnaire.</p>
-        </div>
-      </div>
-      
-      <!-- 2020 -->
-      <div class="timeline-event left">
-        <div class="timeline-content">
-          <h3>2020</h3>
-          <p>Sortie de la <strong>PlayStation 5</strong> et de la <strong>Xbox Series X/S</strong>, début de la neuvième génération de consoles.</p>
-        </div>
-      </div>
-      
     </div>
-  </section>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="color: white;">Évolution du Jeu Vidéo</h1>
+          <p style="color: white;">Découvrez les étapes clés qui ont façonné l'histoire des jeux vidéo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="section-heading" style="text-align: center;">
+            <h6>Histoire</h6>
+            <h2>Frise Chronologique</h2>
+            </div>
+        </div>
+        <div class="col-lg-12">
+          <!-- Frise Chronologique -->
+          <section class="mb-5 fade-in">
+            <div class="timeline">
+              
+              <!-- 1958 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>1958</h3>
+                  <p>Création de <strong>Tennis for Two</strong>, considéré comme l'un des premiers jeux vidéo.</p>
+                </div>
+              </div>
+              
+              <!-- 1962 -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>1962</h3>
+                  <p>Développement de <strong>Spacewar!</strong>, l'un des premiers jeux vidéo interactifs sur ordinateur.</p>
+                </div>
+              </div>
+              
+              <!-- 1972 - Magnavox Odyssey -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>1972</h3>
+                  <p>Lancement de la <strong>Magnavox Odyssey</strong>, la première console de jeux vidéo domestique.</p>
+                </div>
+              </div>
+              
+              <!-- 1972 - Atari Pong -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>1972</h3>
+                  <p><strong>Atari</strong> distribue <strong>Pong</strong>, le premier jeu vidéo à rencontrer un véritable succès commercial.</p>
+                </div>
+              </div>
+              
+              <!-- 1977 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>1977</h3>
+                  <p>Sortie de l'<strong>Atari VCS</strong>, plus tard renommée Atari 2600, une console emblématique de l'époque.</p>
+                </div>
+              </div>
+              
+              <!-- 1983 -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>1983</h3>
+                  <p>Lancement de la <strong>Nintendo Entertainment System (NES)</strong>, marquant le début de l'ère des consoles modernes.</p>
+                </div>
+              </div>
+              
+              <!-- 1991 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>1991</h3>
+                  <p>Sortie de <strong>Street Fighter II</strong>, un jeu de combat révolutionnaire qui a influencé de nombreux titres ultérieurs.</p>
+                </div>
+              </div>
+              
+              <!-- 1994 -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>1994</h3>
+                  <p>Introduction de la <strong>PlayStation</strong> de Sony, entrant dans la compétition des consoles de salon.</p>
+                </div>
+              </div>
+              
+              <!-- 2000 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>2000</h3>
+                  <p>Lancement de la <strong>PlayStation 2</strong>, la console la plus vendue de tous les temps.</p>
+                </div>
+              </div>
+              
+              <!-- 2006 -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>2006</h3>
+                  <p>Sortie de la <strong>Nintendo Wii</strong>, innovant avec sa télécommande de détection de mouvement.</p>
+                </div>
+              </div>
+              
+              <!-- 2013 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>2013</h3>
+                  <p>Lancement de la <strong>PlayStation 4</strong> et de la <strong>Xbox One</strong>, marquant la huitième génération de consoles.</p>
+                </div>
+              </div>
+              
+              <!-- 2017 -->
+              <div class="timeline-event right">
+                <div class="timeline-content">
+                  <h3>2017</h3>
+                  <p>Introduction de la <strong>Nintendo Switch</strong>, une console hybride révolutionnaire.</p>
+                </div>
+              </div>
+              
+              <!-- 2020 -->
+              <div class="timeline-event left">
+                <div class="timeline-content">
+                  <h3>2020</h3>
+                  <p>Sortie de la <strong>PlayStation 5</strong> et de la <strong>Xbox Series X/S</strong>, début de la neuvième génération de consoles.</p>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section most-played">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading" style="text-align: center;">
+            <h6>Pionniers</h6>
+            <h2>Les inventeurs qui ont marqué l'histoire</h2>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/ralphbear.png" alt="Ralph Baer"></a>
+            </div>
+            <div class="down-content">
+              <span class="category">1922-2014</span>
+              <h4>Ralph Baer</h4>
+              <p href="#">Père des jeux vidéo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <p href="#"><img src="assets/images/nolanbus.png" alt="Nolan Bushnell"></p>
+            </div>
+            <div class="down-content">
+              <span class="category">1943-</span>
+              <h4>Nolan Bushnell</h4>
+              <p href="#">Fondateur d'Atari</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/mario.png" alt="Shigeru Miyamoto"></a>
+            </div>
+            <div class="down-content">
+              <span class="category">1952-</span>
+              <h4>Shigeru Miyamoto</h4>
+              <p href="#">Créateur Mario & Zelda</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <p href="#"><img src="assets/images/william.png" alt="William Higinbotham"></^>
+            </div>
+            <div class="down-content">
+              <span class="category">1910-1994</span>
+              <h4>William Higinbotham</h4>
+              <p href="#">Créateur de Tennis for Two</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Découvre en plus</h6>
+                  <h2>Explore l'<em>histoire</em> des jeux vidéo</h2>
+                </div>
+                <p>Apprenez-en plus sur les événements clés qui ont façonné l'industrie du jeu vidéo.</p>
+                <div class="main-button">
+                  <a href="histoire.html">Page Histoire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>MINI-JEU</h6>
+                  <h2>Essaye notre <em>mini-jeu</em> pour revivre l'expérience de l'un des premiers jeux vidéo!</h2>
+                </div>
+                <div class="main-button">
+                  <a href="jeu.html">Jouer maintenant</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>© 2023 L'Invention du Jeu Vidéo - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
 </body>
 </html>

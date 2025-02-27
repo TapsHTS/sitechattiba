@@ -1,948 +1,398 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <title>Mini-Jeu</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/ css-clement.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    /* Styles spécifiques au mini-jeu */
+    canvas {
+      border: 2px solid #fff;
+      display: block;
+      margin: 20px auto;
+      background: #000;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    }
+    
+    .game-controls {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .btn-game {
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-          <a class="navbar-brand" href="index.html">
-      <img src="assets/logo.png" alt="L’Invention du Jeu Vidéo" height="30">
-    </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="evolution.html">Évolution</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="histoire.html">Histoire</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="anecdotes.html">Anecdotes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="jeu.html">Mini-Jeu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="article.html">Article</a>
-          </li>
-        </ul>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </nav>
+  </div>
+  <!-- ***** Preloader End ***** -->
 
-  <main class="container my-5">
-    <h2>Mini-Jeu</h2>
-   <center> <p>Snake</p></center>
-    <style>
-        @media screen and (max-width: 992px)  {
-          #snakeContainer {
-            display: none !important;
-          }
-        }
-        
-        #snakeContainer {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 31.25rem;
-          margin: 0 auto;
-        }
-        
-        #snakeScoreWrapper {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          margin-top: 1rem;
-        }
-        
-        #snakeCanvas {
-          border: 1px solid #00FF00;
-          background-color: #101010;
-        }
-        
-        #snakeScore {
-          font-size: 1rem;
-        }
-        
-        #snakeBestScore {
-          font-size: 1rem;
-          color: #666;
-        }
-        
-        #snakeRestartButton {
-          font-size: 1rem;
-          padding: 0.625rem 1rem;
-          background-color: #333;
-          color: #FFF;
-          border: none;
-          cursor: pointer;
-          position: absolute;
-          display: block;
-        }
-        
-        #snakeRestartButton:hover {
-          background-color: #666;
-        }
-        </style>
-        
-        <div id="snakeContainer">
-        <canvas id="snakeCanvas" width="500" height="500"></canvas>
-        <button id="snakeRestartButton" onclick="startGame()">Jouer</button>
-        <div id="snakeScoreWrapper">
-        <div id="snakeScore">Score : 0</div>
-        <div id="snakeBestScore">Meilleur Score : 0</div>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="L'Invention du Jeu Vidéo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="evolution.html">Évolution</a></li>
+                      <li><a href="histoire.html">Histoire</a></li>
+                      <li><a href="anecdotes.html">Anecdotes</a></li>
+                      <li><a href="jeu.html" class="active">Mini-Jeu</a></li>
+                       
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
         </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Mini-Jeux Rétro</h1>
+          <p>Revivez l'expérience des premiers jeux vidéo</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Jouez</h6>
+            <h2>Pong - Le Jeu Classique</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 text-center">
+          <canvas id="pongCanvas" width="800" height="400"></canvas>
+          
+          <div class="game-controls">
+            <button class="btn btn-primary btn-game" id="startBtn">Démarrer</button>
+            <button class="btn btn-secondary btn-game" id="resetBtn">Réinitialiser</button>
+          </div>
+          
+          <div class="mt-4 mb-4">
+            <h3>Instructions</h3>
+            <p>Utilisez les touches <kbd>W</kbd> et <kbd>S</kbd> pour déplacer la raquette de gauche.</p>
+            <p>Utilisez les touches <kbd>↑</kbd> et <kbd>↓</kbd> pour déplacer la raquette de droite.</p>
+            <p>Le premier joueur à atteindre 10 points gagne!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Histoire</h6>
+            <h2>L'origine des mini-jeux</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <p>
+            Le jeu Pong a été créé en 1972 par Atari et est devenu l'un des premiers jeux vidéo à connaître un succès commercial. 
+            Inspiré par le jeu Tennis for Two de 1958, Pong simule un jeu de tennis de table où les joueurs contrôlent des raquettes 
+            pour frapper une balle d'avant en arrière.
+          </p>
+          <p>
+            Pong était si populaire à sa sortie que les bornes d'arcade se retrouvaient parfois en panne à cause de l'excès de pièces 
+            insérées par les joueurs enthousiastes. Son succès a marqué le début de l'industrie du jeu vidéo moderne et a inspiré de 
+            nombreuses variations et adaptations au fil des décennies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Anecdotes</h6>
+                  <h2>Découvrez des <em>anecdotes</em> sur les jeux vidéo</h2>
+                </div>
+                <p>Des histoires fascinantes sur les jeux vidéo et leur développement tout au long de l'histoire.</p>
+                <div class="main-button">
+                  <a href="anecdotes.html">Voir les anecdotes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>HISTOIRE</h6>
+                  <h2>Explorez l'<em>histoire</em> fascinante des jeux vidéo</h2>
+                </div>
+                <div class="main-button">
+                  <a href="histoire.html">Voir l'histoire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>© 2023 L'Invention du Jeu Vidéo - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Script du jeu Pong -->
+  <script>
+    // Attendre que le DOM soit chargé
+    document.addEventListener('DOMContentLoaded', function() {
+        // Récupération du canvas et du contexte
+        const canvas = document.getElementById('pongCanvas');
+        const ctx = canvas.getContext('2d');
         
-        <script>
-        // Récupérer le canvas et son contexte
-        const canvas = document.getElementById("snakeCanvas");
-        const context = canvas.getContext("2d");
+        // Variables du jeu
+        const paddleHeight = 80;
+        const paddleWidth = 10;
+        const ballRadius = 8;
+        let ballX = canvas.width / 2;
+        let ballY = canvas.height / 2;
+        let ballSpeedX = 5;
+        let ballSpeedY = 3;
+        let leftPaddleY = canvas.height / 2 - paddleHeight / 2;
+        let rightPaddleY = canvas.height / 2 - paddleHeight / 2;
+        let leftScore = 0;
+        let rightScore = 0;
+        let gameRunning = false;
+        const paddleSpeed = 10;
         
-        // Taille d'une cellule du jeu
-        const cellSize = 20;
+        // Contrôles des touches
+        let wPressed = false;
+        let sPressed = false;
+        let upPressed = false;
+        let downPressed = false;
         
-        // Initialiser la position du serpent et sa direction
-        let snake = [{ x: 10, y: 10 }];
-        let direction = "right";
+        // Ajout des événements clavier
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'w' || e.key === 'W') wPressed = true;
+            if (e.key === 's' || e.key === 'S') sPressed = true;
+            if (e.key === 'ArrowUp') upPressed = true;
+            if (e.key === 'ArrowDown') downPressed = true;
+        });
         
-        // Initialiser la position de la nourriture
-        let food = { x: 5, y: 5 };
+        document.addEventListener('keyup', function(e) {
+            if (e.key === 'w' || e.key === 'W') wPressed = false;
+            if (e.key === 's' || e.key === 'S') sPressed = false;
+            if (e.key === 'ArrowUp') upPressed = false;
+            if (e.key === 'ArrowDown') downPressed = false;
+        });
         
-        // Initialiser le score
-        let score = 0;
-        let bestScore = 0;
-        
-        // Variable pour stocker la boucle de jeu
-        let gameLoop;
-        
-        // Fonction pour dessiner le serpent
-        function drawSnake() {
-          context.fillStyle = "#00FF00";
-          snake.forEach((segment) => {
-            context.fillRect(segment.x * cellSize, segment.y * cellSize, cellSize, cellSize);
-          });
+        // Fonction de dessin du terrain
+        function drawCourt() {
+            // Fond noir
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Ligne centrale
+            ctx.strokeStyle = '#fff';
+            ctx.setLineDash([10, 15]);
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, 0);
+            ctx.lineTo(canvas.width / 2, canvas.height);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            
+            // Scores
+            ctx.font = '40px Arial';
+            ctx.fillStyle = '#fff';
+            ctx.fillText(leftScore, canvas.width / 4, 50);
+            ctx.fillText(rightScore, 3 * canvas.width / 4, 50);
         }
         
-        // Fonction pour dessiner la nourriture
-        function drawFood() {
-          context.fillStyle = "#FF0000";
-          context.fillRect(food.x * cellSize, food.y * cellSize, cellSize, cellSize);
+        // Fonction de dessin des raquettes
+        function drawPaddles() {
+            ctx.fillStyle = '#fff';
+            
+            // Raquette gauche
+            ctx.fillRect(0, leftPaddleY, paddleWidth, paddleHeight);
+            
+            // Raquette droite
+            ctx.fillRect(canvas.width - paddleWidth, rightPaddleY, paddleWidth, paddleHeight);
         }
         
-        // Fonction pour dessiner le score
-        function drawScore() {
-          document.getElementById("snakeScore").textContent = `Score : ${score}`;
-          document.getElementById("snakeBestScore").textContent = `Meilleur Score : ${bestScore}`;
+        // Fonction de dessin de la balle
+        function drawBall() {
+            ctx.fillStyle = '#fff';
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            ctx.fill();
         }
         
-        // Fonction pour mettre à jour le jeu à chaque frame
+        // Fonction de mise à jour des positions
         function update() {
-          // Effacer le canvas
-          context.clearRect(0, 0, canvas.width, canvas.height);
-          
-          // Mettre à jour la position du serpent en fonction de la direction
-          const head = { x: snake[0].x, y: snake[0].y };
-          switch (direction) {
-            case "up":
-            head.y--;
-            break;
-            case "down":
-            head.y++;
-            break;
-            case "left":
-            head.x--;
-            break;
-            case "right":
-            head.x++;
-            break;
-          }
-          snake.unshift(head);
-          
-          // Vérifier si le serpent a mangé la nourriture
-          if (head.x === food.x && head.y === food.y) {
-            // Générer une nouvelle position pour la nourriture
-            food.x = Math.floor(Math.random() * canvas.width / cellSize);
-            food.y = Math.floor(Math.random() * canvas.height / cellSize);
+            // Mouvements des raquettes
+            if (wPressed && leftPaddleY > 0) leftPaddleY -= paddleSpeed;
+            if (sPressed && leftPaddleY < canvas.height - paddleHeight) leftPaddleY += paddleSpeed;
+            if (upPressed && rightPaddleY > 0) rightPaddleY -= paddleSpeed;
+            if (downPressed && rightPaddleY < canvas.height - paddleHeight) rightPaddleY += paddleSpeed;
             
-            // Augmenter le score
-            score++;
+            // Mouvement de la balle
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
             
-            // Mettre à jour le meilleur score si nécessaire
-            if (score > bestScore) {
-              bestScore = score;
+            // Collision avec les bords haut et bas
+            if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) {
+                ballSpeedY = -ballSpeedY;
             }
-          } else {
-            // Supprimer la dernière cellule du serpent s'il n'a pas mangé de nourriture
-            snake.pop();
-          }
-          
-          // Vérifier si le serpent a atteint les bords du canvas ou s'est mordu la queue
-          if (
-          head.x < 0 ||
-          head.y < 0 ||
-          head.x >= canvas.width / cellSize ||
-          head.y >= canvas.height / cellSize ||
-          hasSelfCollision()
-          ) {
-            // Arrêter le jeu
-            clearInterval(gameLoop);
-            // Afficher le score final
-            alert(`Game Over! Votre score est de ${score}`);
             
-            // Afficher le bouton de redémarrage
-            document.getElementById("snakeRestartButton").style.display = "block";
-          }
-          
-          // Dessiner le serpent, la nourriture et le score
-          drawSnake();
-          drawFood();
-          drawScore();
+            // Collision avec les raquettes
+            // Raquette gauche
+            if (ballX - ballRadius < paddleWidth && ballY > leftPaddleY && ballY < leftPaddleY + paddleHeight) {
+                ballSpeedX = -ballSpeedX;
+                // Ajuster la trajectoire en fonction de l'endroit où la balle touche la raquette
+                let deltaY = ballY - (leftPaddleY + paddleHeight/2);
+                ballSpeedY = deltaY * 0.2;
+            }
+            
+            // Raquette droite
+            if (ballX + ballRadius > canvas.width - paddleWidth && ballY > rightPaddleY && ballY < rightPaddleY + paddleHeight) {
+                ballSpeedX = -ballSpeedX;
+                // Ajuster la trajectoire en fonction de l'endroit où la balle touche la raquette
+                let deltaY = ballY - (rightPaddleY + paddleHeight/2);
+                ballSpeedY = deltaY * 0.2;
+            }
+            
+            // Point marqué
+            if (ballX < 0) {
+                rightScore++;
+                resetBall();
+                if (rightScore >= 10) {
+                    gameRunning = false;
+                    alert("Joueur de droite gagne!");
+                }
+            } else if (ballX > canvas.width) {
+                leftScore++;
+                resetBall();
+                if (leftScore >= 10) {
+                    gameRunning = false;
+                    alert("Joueur de gauche gagne!");
+                }
+            }
         }
         
-        
-        // Fonction pour vérifier si le serpent s'est mordu la queue
-        function hasSelfCollision() {
-          const head = snake[0];
-          for (let i = 1; i < snake.length; i++) {
-            if (snake[i].x === head.x && snake[i].y === head.y) {
-              return true;
-            }
-          }
-          return false;
+        // Fonction de remise à zéro de la balle
+        function resetBall() {
+            ballX = canvas.width / 2;
+            ballY = canvas.height / 2;
+            ballSpeedX = -ballSpeedX;
+            ballSpeedY = Math.random() * 6 - 3;
         }
         
-        // Fonction pour gérer les événements de touche
-        function handleKeyPress(event) {
-          // Mettre à jour la direction en fonction de la touche pressée
-          switch (event.key) {
-            case "ArrowUp":
-            if (direction !== "down") {
-              direction = "up";
-            }
-            break;
-            case "ArrowDown":
-            if (direction !== "up") {
-              direction = "down";
-            }
-            break;
-            case "ArrowLeft":
-            if (direction !== "right") {
-              direction = "left";
-            }
-            break;
-            case "ArrowRight":
-            if (direction !== "left") {
-              direction = "right";
-            }
-            break;
-          }
+        // Fonction de réinitialisation du jeu
+        function resetGame() {
+            leftScore = 0;
+            rightScore = 0;
+            leftPaddleY = canvas.height / 2 - paddleHeight / 2;
+            rightPaddleY = canvas.height / 2 - paddleHeight / 2;
+            resetBall();
+            // Dessiner le terrain initial
+            drawCourt();
+            drawPaddles();
+            drawBall();
         }
         
-        // Fonction pour démarrer le jeu
-        function startGame() {
-          // Réinitialiser les variables
-          snake = [{ x: 10, y: 10 }];
-          direction = "right";
-          score = 0;
-          
-          // Masquer le bouton de redémarrage
-          document.getElementById("snakeRestartButton").style.display = "none";
-          
-          // Démarrer la boucle de jeu
-          gameLoop = setInterval(update, 1000 / 8);
+        // Boucle de jeu
+        function gameLoop() {
+            if (gameRunning) {
+                update();
+                drawCourt();
+                drawPaddles();
+                drawBall();
+                requestAnimationFrame(gameLoop);
+            }
         }
         
-        // Écouter les événements de touche
-        document.addEventListener("keydown", handleKeyPress);
-        </script>
+        // Gestionnaire pour le bouton de démarrage
+        document.getElementById('startBtn').addEventListener('click', function() {
+            if (!gameRunning) {
+                gameRunning = true;
+                gameLoop();
+            }
+        });
+        
+        // Gestionnaire pour le bouton de réinitialisation
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            gameRunning = false;
+            resetGame();
+        });
+        
+        // Initialiser le jeu au chargement
+        resetGame();
+    });
+  </script>
 
-        <center><p>Morpion</p></center>
-
-        <style>
-            @media screen and (max-width: 992px)  {
-              #tictactoeContainer {
-                display: none !important;
-              }
-            }
-            
-            #tictactoeContainer {
-              width: 28.125rem;
-              margin: 0 auto;
-            }
-            
-            table {
-              border-collapse: collapse;
-              margin: 1.25rem auto;
-              background-color: #101010;
-            }
-            
-            td {
-              width: 9.375rem;
-              height: 9.375rem;
-              text-align: center;
-              font-size: 4.5rem;
-              border: 1px solid #333;
-              cursor: pointer;
-            }
-            
-            #tictactoe-scoreboard {
-              display: flex;
-              justify-content: space-between;
-              width: 100%;
-              margin-top: 1rem;
-            }
-            
-            #tictactoe-scoreboard span {
-              margin-right: 0.625rem;
-            }
-            
-            .player-symbol, .bot-symbol {
-              color: #fdd33c;
-            }
-            
-            </style>
-            
-            <div id="tictactoeContainer">
-            <table>
-            <tr>
-            <td id="tictactoe-cell-0-0"></td>
-            <td id="tictactoe-cell-0-1"></td>
-            <td id="tictactoe-cell-0-2"></td>
-            </tr>
-            <tr>
-            <td id="tictactoe-cell-1-0"></td>
-            <td id="tictactoe-cell-1-1"></td>
-            <td id="tictactoe-cell-1-2"></td>
-            </tr>
-            <tr>
-            <td id="tictactoe-cell-2-0"></td>
-            <td id="tictactoe-cell-2-1"></td>
-            <td id="tictactoe-cell-2-2"></td>
-            </tr>
-            </table>
-            <div id="tictactoe-scoreboard">
-            <span id="tictactoe-player-score">Joueur : 0</span>
-            <span id="tictactoe-draw-score">Matchs nuls : 0</span>
-            <span id="tictactoe-bot-score">Bot : 0</span>
-            </div>
-            </div>
-            
-            <script>
-            // Variable pour suivre l'état du tour (true = tour du joueur, false = tour du bot)
-            let tictactoePlayerTurnFlag = true;
-            
-            // Tableau représentant la grille du jeu
-            let tictactoeBoard = [
-            ["", "", ""],
-            ["", "", ""],
-            ["", "", ""]
-            ];
-            
-            // Symboles utilisés pour les joueurs et le bot
-            const tictactoePlayerSymbol = "X";
-            const tictactoeBotSymbol = "O";
-            
-            // Compteurs de victoires du joueur, des matchs nuls et du bot
-            let tictactoePlayerWins = 0;
-            let tictactoeDraws = 0;
-            let tictactoeBotWins = 0;
-            
-            // Fonction pour afficher la grille du jeu
-            function tictactoeDisplayBoard() {
-              for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 3; j++) {
-                  const cell = document.getElementById(`tictactoe-cell-${i}-${j}`);
-                  cell.textContent = tictactoeBoard[i][j];
-                  
-                  // Ajouter la classe appropriée en fonction du symbole
-                  if (tictactoeBoard[i][j] === tictactoePlayerSymbol) {
-                    cell.classList.add("player-symbol");
-                  } else if (tictactoeBoard[i][j] === tictactoeBotSymbol) {
-                    cell.classList.add("bot-symbol");
-                  }
-                }
-              }
-            }
-            
-            // Ajouter les gestionnaires d'événements de clic une seule fois, au chargement de la page
-            for (let i = 0; i < 3; i++) {
-              for (let j = 0; j < 3; j++) {
-                const cell = document.getElementById(`tictactoe-cell-${i}-${j}`);
-                cell.addEventListener("click", () => {
-                  tictactoePlayerTurn(i, j);
-                });
-              }
-            }
-            
-            
-            // Fonction pour mettre à jour le scoreboard
-            function tictactoeUpdateScoreboard() {
-              document.getElementById("tictactoe-player-score").textContent = `Joueur : ${tictactoePlayerWins}`;
-              document.getElementById("tictactoe-draw-score").textContent = `Matchs nuls : ${tictactoeDraws}`;
-              document.getElementById("tictactoe-bot-score").textContent = `Bot : ${tictactoeBotWins}`;
-            }
-            
-            // Fonction pour vérifier si un joueur a gagné
-            function tictactoeCheckWinner(symbol) {
-              // Vérification des lignes
-              for (let i = 0; i < 3; i++) {
-                if (
-                tictactoeBoard[i][0] === symbol &&
-                tictactoeBoard[i][1] === symbol &&
-                tictactoeBoard[i][2] === symbol
-                ) {
-                  return true;
-                }
-              }
-              
-              // Vérification des colonnes
-              for (let j = 0; j < 3; j++) {
-                if (
-                tictactoeBoard[0][j] === symbol &&
-                tictactoeBoard[1][j] === symbol &&
-                tictactoeBoard[2][j] === symbol
-                ) {
-                  return true;
-                }
-              }
-              
-              // Vérification des diagonales
-              if (
-              tictactoeBoard[0][0] === symbol &&
-              tictactoeBoard[1][1] === symbol &&
-              tictactoeBoard[2][2] === symbol
-              ) {
-                return true;
-              }
-              if (
-              tictactoeBoard[0][2] === symbol &&
-              tictactoeBoard[1][1] === symbol &&
-              tictactoeBoard[2][0] === symbol
-              ) {
-                return true;
-              }
-              
-              return false;
-            }
-            
-            // Fonction pour vérifier si la grille est complètement remplie (match nul)
-            function tictactoeCheckDraw() {
-              for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 3; j++) {
-                  if (tictactoeBoard[i][j] === "") {
-                    return false;
-                  }
-                }
-              }
-              return true;
-            }
-            
-            // Fonction pour le tour du joueur
-            function tictactoePlayerTurn(row, col) {
-              if (tictactoePlayerTurnFlag && tictactoeBoard[row][col] === "") {
-                tictactoeBoard[row][col] = tictactoePlayerSymbol;
-                tictactoeDisplayBoard();
-                
-                if (tictactoeCheckWinner(tictactoePlayerSymbol)) {
-                  setTimeout(() => {
-                    alert("Tu as gagné !");
-                    tictactoePlayerWins++;
-                    tictactoeUpdateScoreboard();
-                    tictactoeResetGame();
-                  }, 100);
-                } else if (tictactoeCheckDraw()) {
-                  setTimeout(() => {
-                    alert("Match Nul !");
-                    tictactoeDraws++;
-                    tictactoeUpdateScoreboard();
-                    tictactoeResetGame();
-                  }, 100);
-                } else {
-                  // Switch the turn to the bot
-                  tictactoePlayerTurnFlag = false;
-                  setTimeout(tictactoeBotTurn, 500);
-                }
-              }
-            }
-            
-            // Fonction pour le tour du bot
-            function tictactoeBotTurn() {
-              
-              // Vérifier si le jeu est déjà terminé
-              if (tictactoeCheckWinner(tictactoePlayerSymbol) || tictactoeCheckWinner(tictactoeBotSymbol) || tictactoeCheckDraw()) {
-                return;
-              }
-              
-              let bestScore = -Infinity;
-              let bestMove;
-              
-              // Parcourir toutes les cellules disponibles
-              for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 3; j++) {
-                  if (tictactoeBoard[i][j] === "") {
-                    // Effectuer un mouvement temporaire pour évaluer son score
-                    tictactoeBoard[i][j] = tictactoeBotSymbol;
-                    
-                    // Ajouter une logique de chance pour faire un mauvais coup
-                    if (Math.random() < 0.01) {
-                      // Mauvais coup : Choisir une cellule aléatoire parmi les disponbiles
-                      bestMove = { row: i, col: j };
-                    } else {
-                      // Bon coup : Utiliser l'algorithme minimax pour trouver le meilleur mouvement
-                      let score = tictactoeMinimax(tictactoeBoard, 0, false);
-                      
-                      // Mettre à jour le meilleur score et le meilleur mouvement
-                      if (score > bestScore) {
-                        bestScore = score;
-                        bestMove = { row: i, col: j };
-                      }
-                    }
-                    
-                    tictactoeBoard[i][j] = ""; // Annuler le mouvement temporaire
-                  }
-                }
-              }
-              
-              // Effectuer le meilleur mouvement
-              const { row, col } = bestMove;
-              tictactoeBoard[row][col] = tictactoeBotSymbol;
-              tictactoeDisplayBoard();
-              
-              if (tictactoeCheckWinner(tictactoeBotSymbol)) {
-                setTimeout(() => {
-                  alert("Le bot a gagné !");
-                  tictactoeBotWins++;
-                  tictactoeUpdateScoreboard();
-                  tictactoeResetGame();
-                }, 100);
-              } else if (tictactoeCheckDraw()) {
-                setTimeout(() => {
-                  alert("Match nul !");
-                  tictactoeDraws++;
-                  tictactoeUpdateScoreboard();
-                  tictactoeResetGame();
-                }, 100);
-              } else {
-                // Passer le tour au joueur
-                tictactoePlayerTurnFlag = true;
-              }
-            }
-            
-            // Fonction récursive du Minimax avec élagage alpha-bêta
-            function tictactoeMinimax(board, depth, isMaximizingPlayer) {
-              let score = tictactoeEvaluateState();
-              
-              if (score !== undefined) {
-                return score;
-              }
-              
-              if (isMaximizingPlayer) {
-                let bestScore = -Infinity;
-                
-                for (let i = 0; i < 3; i++) {
-                  for (let j = 0; j < 3; j++) {
-                    if (board[i][j] === "") {
-                      board[i][j] = tictactoeBotSymbol;
-                      let score = tictactoeMinimax(board, depth + 1, false);
-                      board[i][j] = "";
-                      bestScore = Math.max(score, bestScore);
-                    }
-                  }
-                }
-                
-                return bestScore;
-              } else {
-                let bestScore = Infinity;
-                
-                for (let i = 0; i < 3; i++) {
-                  for (let j = 0; j < 3; j++) {
-                    if (board[i][j] === "") {
-                      board[i][j] = tictactoePlayerSymbol;
-                      let score = tictactoeMinimax(board, depth + 1, true);
-                      board[i][j] = "";
-                      bestScore = Math.min(score, bestScore);
-                    }
-                  }
-                }
-                
-                return bestScore;
-              }
-            }
-            
-            // Fonction pour évaluer l'état actuel du jeu
-            function tictactoeEvaluateState() {
-              if (tictactoeCheckWinner(tictactoePlayerSymbol)) {
-                return -1;
-              } else if (tictactoeCheckWinner(tictactoeBotSymbol)) {
-                return 1;
-              } else if (tictactoeCheckDraw()) {
-                return 0;
-              } else {
-                return undefined;
-              }
-            }
-            
-            // Fonction pour réinitialiser le jeu
-            function tictactoeResetGame() {
-              tictactoeBoard = [
-              ["", "", ""],
-              ["", "", ""],
-              ["", "", ""]
-              ];
-              tictactoeDisplayBoard();
-              tictactoePlayerTurnFlag = true; // Réinitialiser le tour du joueur à true
-            }
-            
-            // Fonction pour initialiser le jeu
-            function tictactoeStartGame() {
-              tictactoeDisplayBoard();
-              tictactoeUpdateScoreboard();
-            }
-            
-            // Appel à la fonction d'initialisation du jeu au chargement de la page
-            tictactoeStartGame();
-            
-            </script>
-
-            <center><p>Pong!</p></center>
-            <style>
-                @media screen and (max-width: 992px)  {
-                  #pong-game-container {
-                    display: none !important;
-                  }
-                }
-                
-                #pong-game-container {
-                  width: 37.5rem;
-                  margin: 0 auto;
-                  position: relative;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                }
-                
-                #pong-game-area {
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 25rem;
-                  border: 1.5px solid #f5f5f5;
-                  background-color: #101010;
-                }
-                
-                #pong-paddle-left,
-                #pong-paddle-right {
-                  position: absolute;
-                  width: 1.25rem;
-                  height: 4rem;
-                  background-color: #f5f5f5;
-                  transition: all 75ms linear;
-                  border-radius: 0.75rem;
-                }
-                
-                #pong-paddle-left {
-                  top: 168px;
-                  left: 10px;
-                }
-                
-                #pong-paddle-right {
-                  top: 168px;
-                  right: 10px;
-                }
-                
-                #pong-ball {
-                  position: absolute;
-                  width: 1.25rem;
-                  height: 1.25rem;
-                  background-color: #fdd33c;
-                  border-radius: 50%;
-                }
-                
-                #pong-scoreboard {
-                  text-align: center;
-                  font-size: 1.5rem;
-                  margin-top: 1.25rem;
-                }
-                
-                #pong-restart-button {
-                  padding: 0.625rem 1rem;
-                  font-size: 1rem;
-                  background-color: #333;
-                  color: #fff;
-                  border: none;
-                  cursor: pointer;
-                  position: absolute;
-                }
-                
-                #pong-restart-button:hover {
-                  background-color: #666;
-                }
-                </style>
-                
-                <div id="pong-game-container">
-                <div id="pong-game-area">
-                <div id="pong-paddle-left"></div>
-                <div id="pong-paddle-right"></div>
-                <div id="pong-ball"></div>
-                </div>
-                <button id="pong-restart-button">Jouer</button>
-                <div id="pong-scoreboard">
-                <span id="pong-player-score">0</span> : <span id="pong-bot-score">0</span>
-                </div>
-                </div>
-                
-                <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  // Déclarations et initialisation des variables
-                  const raquetteGauche = document.getElementById("pong-paddle-left");
-                  const raquetteDroite = document.getElementById("pong-paddle-right");
-                  const balle = document.getElementById("pong-ball");
-                  const scoreJoueurElement = document.getElementById("pong-player-score");
-                  const scoreBotElement = document.getElementById("pong-bot-score");
-                  const boutonRestart = document.getElementById("pong-restart-button");
-                  
-                  let scoreJoueur = 0;
-                  let scoreBot = 0;
-                  
-                  const vitesseBalleInitiale = 4;
-                  let vitesseBalle = vitesseBalleInitiale;
-                  let posXballe = 290;
-                  let posYballe = 190;
-                  let directionXBalle = 1;
-                  let directionYBalle = 1;
-                  
-                  const vitesseRaquette = 28;
-                  let posYraquetteGauche = 168;
-                  let posYraquetteDroite = 168;
-                  
-                  let intervalleJeu;
-                  let partieDemarree = false;
-                  let partieTerminee = false;
-                  
-                  
-                  // Création de l'objet bot pour contrôler la raquette de droite
-                  const bot = {
-                    update: function() {
-                      deplacerRaquetteBot();
-                    }
-                  };
-                  
-                  boutonRestart.addEventListener("click", () => {
-                    if (!partieDemarree || partieTerminee) {
-                      demarrerPartie();
-                      partieDemarree = true;
-                      partieTerminee = false;
-                      boutonRestart.style.display = "none";
-                    } else {
-                      reinitialiserPartie();
-                      demarrerPartie();
-                    }
-                  });
-                  
-                  function reinitialiserPartie() {
-                    reinitialiserBalle();
-                    reinitialiserRaquettes();
-                  }
-                  
-                  
-                  // Écouteur d'événement pour la touche enfoncée
-                  document.addEventListener("keydown", (event) => {
-                    if (event.code === "ArrowDown") {
-                      event.preventDefault();
-                      deplacerRaquetteBas();
-                    } else if (event.code === "ArrowUp") {
-                      event.preventDefault();
-                      deplacerRaquetteHaut();
-                    }
-                  });
-                  // Écouteur d'événement pour la touche relâchée
-                  document.addEventListener("keyup", (event) => {
-                    if (event.code === "ArrowDown" || event.code === "ArrowUp") {
-                      event.preventDefault();
-                      arreterRaquette();
-                    }
-                  });
-                  
-                  // Fonction pour démarrer la partie
-                  function demarrerPartie() {
-                    reinitialiserBalle();
-                    reinitialiserRaquettes();
-                    boutonRestart.style.display = "none";
-                    intervalleJeu = setInterval(mettreAJourJeu, 20);
-                    partieDemarree = true;
-                    partieTerminee = false;
-                  }
-                  
-                  // Fonction pour mettre à jour l'état du jeu
-                  function mettreAJourJeu() {
-                    deplacerBalle();
-                    deplacerRaquettes();
-                    verifierCollision();
-                    verifierFinManche();
-                    bot.update();
-                  }
-                  
-                  // Fonction pour déplacer la balle
-                  function deplacerBalle() {
-                    posXballe += vitesseBalle * directionXBalle;
-                    posYballe += vitesseBalle * directionYBalle;
-                    balle.style.left = posXballe + "px";
-                    balle.style.top = posYballe + "px";
-                  }
-                  
-                  // Fonction pour déplacer les raquettes
-                  function deplacerRaquettes() {
-                    raquetteGauche.style.top = posYraquetteGauche + "px";
-                    raquetteDroite.style.top = posYraquetteDroite + "px";
-                  }
-                  
-                  // Vitesse de déplacement réduite pour une raquette plus fluide
-                  const vitesseRaquetteBot = 14;
-                  
-                  function deplacerRaquetteBot() {
-                    // Ajustement correct de la raquette en fonction de la position estimée de la balle
-                    if (posYraquetteDroite + 32 > posYballe + 35 && posYraquetteDroite > 0) {
-                      posYraquetteDroite -= vitesseRaquetteBot;
-                    } else if (posYraquetteDroite + 32 < posYballe - 35 && posYraquetteDroite + 64 < 336) {
-                      posYraquetteDroite += vitesseRaquetteBot;
-                    }
-                    
-                    // Appeler la fonction de déplacement du bot à nouveau pour créer une boucle continue
-                    requestAnimationFrame(deplacerRaquetteBot);
-                  }
-                  
-                  // Appeler la fonction de déplacement du bot pour la première fois
-                  requestAnimationFrame(deplacerRaquetteBot);
-                  
-                  
-                  
-                  // Fonction pour vérifier la collision de la balle avec les raquettes et les murs
-                  function verifierCollision() {
-                    // Collision avec les raquettes
-                    if (
-                    posXballe <= 30 &&
-                    posYballe + 10 >= posYraquetteGauche &&
-                    posYballe <= posYraquetteGauche + 64
-                    ) {
-                      directionXBalle = 1;
-                      augmenterVitesseBalle();
-                    } else if (
-                    posXballe >= 560 &&
-                    posYballe + 10 >= posYraquetteDroite &&
-                    posYballe <= posYraquetteDroite + 64
-                    ) {
-                      directionXBalle = -1;
-                      augmenterVitesseBalle();
-                    }
-                    
-                    // Collision avec les murs supérieur et inférieur
-                    if (posYballe <= 0 || posYballe >= 380) {
-                      directionYBalle *= -1;
-                    }
-                  }
-                  
-                  // Fonction pour augmenter la vitesse de la balle
-                  function augmenterVitesseBalle() {
-                    if (vitesseBalle < 12) {
-                      vitesseBalle += 0.25;
-                    }
-                  }
-                  
-                  // Fonction pour mettre à jour le tableau des scores
-                  function mettreAJourTableauScores() {
-                    scoreJoueurElement.textContent = scoreJoueur;
-                    scoreBotElement.textContent = scoreBot;
-                  }
-                  
-                  
-                  // Fonction pour marquer un point et mettre à jour le score
-                  function marquerPoint(scoreElement) {
-                    const score = parseInt(scoreElement.textContent);
-                    scoreElement.textContent = score + 1;
-                  }
-                  
-                  // Fonction pour vérifier la fin de la manche
-                  function verifierFinManche() {
-                    if (posXballe <= 0) {
-                      marquerPoint(scoreBotElement);
-                      afficherAlerte("Le bot a marqué un point !");
-                      stopperPartie();
-                      reinitialiserBalle();
-                      boutonRestart.style.display = "block";
-                    } else if (posXballe >= 585) {
-                      marquerPoint(scoreJoueurElement);
-                      afficherAlerte("Vous avez marqué un point !");
-                      stopperPartie();
-                      reinitialiserBalle();
-                      boutonRestart.style.display = "block";
-                    }
-                  }
-                  
-                  // Fonction pour afficher une alerte
-                  function afficherAlerte(message) {
-                    alert(message);
-                  }
-                  
-                  // Fonction pour réinitialiser la position de la balle
-                  function reinitialiserBalle() {
-                    posXballe = 290;
-                    posYballe = 190;
-                    directionXBalle = 1;
-                    directionYBalle = 1;
-                    vitesseBalle = vitesseBalleInitiale;
-                  }
-                  
-                  // Fonction pour réinitialiser la position des raquettes
-                  function reinitialiserRaquettes() {
-                    posYraquetteGauche = 168;
-                    posYraquetteDroite = 168;
-                  }
-                  
-                  // Fonction pour arrêter la partie
-                  function stopperPartie() {
-                    clearInterval(intervalleJeu);
-                  }
-                  
-                  // Fonction pour déplacer la raquette vers le bas
-                  function deplacerRaquetteBas() {
-                    if (posYraquetteGauche < 336) {
-                      posYraquetteGauche += vitesseRaquette;
-                    }
-                  }
-                  
-                  // Fonction pour déplacer la raquette vers le haut
-                  function deplacerRaquetteHaut() {
-                    if (posYraquetteGauche > 0) {
-                      posYraquetteGauche -= vitesseRaquette;
-                    }
-                  }
-                  
-                  // Fonction pour arrêter le déplacement de la raquette
-                  function arreterRaquette() {
-                    // Ne fait rien
-                  }
-                });
-                </script>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

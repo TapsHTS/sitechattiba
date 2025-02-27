@@ -1,57 +1,258 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Histoire Technologique</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>Histoire du Jeu Vidéo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/ css-clement.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-        <a class="navbar-brand" href="index.html">
-      <img src="assets/logo.png" alt="L’Invention du Jeu Vidéo" height="30">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="evolution.html">Évolution</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="histoire.html">Histoire</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="anecdotes.html">Anecdotes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="jeu.html">Mini-Jeu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="article.html">Article</a>
-        </li>
-      </ul>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
-</nav>
-<main class="container my-5">
-      <!-- Section Vidéo Intégrée -->
-  <section class="my-5 fade-in text-center">
-    <h2>Présentation Vidéo</h2>
-    <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
-      <iframe src="https://www.youtube.com/embed/8EiGun6Etfg" title="Présentation du Jeu Vidéo" allowfullscreen></iframe>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="L'Invention du Jeu Vidéo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="evolution.html">Évolution</a></li>
+                      <li><a href="histoire.html" class="active">Histoire</a></li>
+                      <li><a href="anecdotes.html">Anecdotes</a></li>
+                      <li><a href="jeu.html">Mini-Jeu</a></li>
+                       
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
     </div>
-  </section>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Histoire du Jeu Vidéo</h1>
+          <p>Découvrez comment les jeux vidéo ont évolué au fil du temps</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Présentation</h6>
+            <h2>Vidéo Documentaire</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+            <iframe src="https://www.youtube.com/embed/8EiGun6Etfg" title="Présentation du Jeu Vidéo" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="section most-played">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Chronologie</h6>
+            <h2>Les étapes clés de l'histoire</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="gaming-library">
+            <div class="item">
+              <ul>
+                <li><img src="assets/images/1958.jpg" alt="1958" class="templatemo-item"></li>
+                <li><h4>1958</h4><span>Tennis for Two</span></li>
+                <li><h4>William Higinbotham</h4><span>Créateur</span></li>
+                <li><h4>Jeu analogique</h4><span>Technologie</span></li>
+                <li><h4>Premier jeu interactif</h4><span>Importance</span></li>
+              </ul>
+            </div>
+            <div class="item">
+              <ul>
+                <li><img src="assets/images/1972.jpg" alt="1972" class="templatemo-item"></li>
+                <li><h4>1972</h4><span>Pong</span></li>
+                <li><h4>Atari</h4><span>Développeur</span></li>
+                <li><h4>Arcade</h4><span>Plateforme</span></li>
+                <li><h4>Premier succès commercial</h4><span>Importance</span></li>
+              </ul>
+            </div>
+            <div class="item">
+              <ul>
+                <li><img src="assets/images/1985.jpg" alt="1985" class="templatemo-item"></li>
+                <li><h4>1985</h4><span>Super Mario Bros</span></li>
+                <li><h4>Nintendo</h4><span>Développeur</span></li>
+                <li><h4>NES</h4><span>Plateforme</span></li>
+                <li><h4>Révolution du platformer</h4><span>Importance</span></li>
+              </ul>
+            </div>
+            <div class="item">
+              <ul>
+                <li><img src="assets/images/1996.jpg" alt="1996" class="templatemo-item"></li>
+                <li><h4>1996</h4><span>Quake</span></li>
+                <li><h4>id Software</h4><span>Développeur</span></li>
+                <li><h4>PC</h4><span>Plateforme</span></li>
+                <li><h4>Révolution 3D</h4><span>Importance</span></li>
+              </ul>
+            </div>
+            <div class="item">
+              <ul>
+                <li><img src="assets/images/2001.jpg" alt="2001" class="templatemo-item"></li>
+                <li><h4>2001</h4><span>Grand Theft Auto III</span></li>
+                <li><h4>Rockstar Games</h4><span>Développeur</span></li>
+                <li><h4>PlayStation 2</h4><span>Plateforme</span></li>
+                <li><h4>Révolution monde ouvert</h4><span>Importance</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Développement</h6>
+            <h2>Les périodes majeures</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <div class="item">
+                <h4>Les années 1950-1970</h4>
+                <p>Naissance des jeux vidéo avec les premières expérimentations dans les laboratoires universitaires.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="item">
+                <h4>Les années 1980</h4>
+                <p>L'âge d'or des arcades et l'explosion des consoles domestiques avec Nintendo et Sega.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="item">
+                <h4>Les années 1990-2000</h4>
+                <p>Révolution 3D et CD-ROM, avec l'arrivée de Sony sur le marché et l'essor du jeu PC.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="item">
+                <h4>Les années 2010 à aujourd'hui</h4>
+                <p>Ère du jeu connecté, de la réalité virtuelle et du cloud gaming.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Découvre plus</h6>
+                  <h2>Explore les <em>anecdotes</em> sur l'histoire du jeu vidéo</h2>
+                </div>
+                <p>Des histoires fascinantes et méconnues sur le développement des jeux vidéo et leurs créateurs.</p>
+                <div class="main-button">
+                  <a href="anecdotes.html">Voir les Anecdotes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>MINI-JEU</h6>
+                  <h2>Essaye notre <em>mini-jeu</em> pour revivre l'expérience de l'un des premiers jeux vidéo!</h2>
+                </div>
+                <div class="main-button">
+                  <a href="jeu.html">Jouer maintenant</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>© 2023 L'Invention du Jeu Vidéo - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
 </body>
 </html>

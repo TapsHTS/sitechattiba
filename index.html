@@ -1,115 +1,240 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invention du Jeu Vidéo</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="assets/logo.png" alt="L’Invention du Jeu Vidéo" height="30">
-    </a>
-    <!-- ...bouton toggler pour mobile... -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-            <a class="nav-link active" href="index.html" aria-current="page">Accueil</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="evolution.html">Évolution</a></li>
-        <li class="nav-item"><a class="nav-link" href="histoire.html">Histoire</a></li>
-        <li class="nav-item"><a class="nav-link" href="anecdotes.html">Anecdotes</a></li>
-        <li class="nav-item"><a class="nav-link" href="jeu.html">Mini-Jeu</a></li>
-        <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
-      </ul>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Invention du Jeu Vidéo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/ css-clement.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
-</nav>
+  <!-- ***** Preloader End ***** -->
 
-  <header class="bg-primary text-white p-4 text-center">
-    <h1 class="typewriter">L’Invention du Jeu Vidéo</h1>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="L'Invention du Jeu Vidéo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html" class="active">Accueil</a></li>
+                      <li><a href="evolution.html">Évolution</a></li>
+                      <li><a href="histoire.html">Histoire</a></li>
+                      <li><a href="anecdotes.html">Anecdotes</a></li>
+                      <li><a href="jeu.html">Mini-Jeu</a></li>
+                       
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
   </header>
+  <!-- ***** Header Area End ***** -->
 
-  <main class="container my-5">
-  
-  <section class="mb-5 fade-in d-flex">
-    <!-- Texte à gauche -->
-    <div class="me-4">
-      <h2>Origines</h2>
-      <p>
-        L’invention du jeu vidéo remonte aux années 1950, période où des chercheurs universitaires ont commencé à explorer les possibilités offertes par les technologies émergentes. En 1958, le physicien William Higinbotham a créé “Tennis for Two”, un jeu interactif affiché sur un oscilloscope, permettant aux visiteurs de simuler une partie de tennis en temps réel.<br><br>
-        
-        En 1952, Christopher Strachey, directeur du laboratoire de programmation de l’Université d’Edimbourg, a développé “OXO”, une version électronique du jeu de morpion, marquant l’un des premiers jeux informatiques à utiliser un affichage électronique.<br><br>
-        
-        Ces premières expérimentations ont jeté les bases de l’industrie du jeu vidéo, qui allait connaître une croissance exponentielle dans les décennies suivantes, captivant des millions de joueurs à travers le monde.</p>
-    </div>
-    <!-- Image à droite agrandie -->
-    <div>
-      <img src="assets/origine.jpg" alt="Origines du Jeu Vidéo" class="img-fluid rounded" width="500" height="500">
-    </div>
-  </section>
-
-  <section class="mb-5 fade-in d-flex flex-row-reverse">
-    <!-- Image à gauche agrandie -->
-    <div class="me-4">
-      <img src="assets/consoles.png" alt="Les Premières Consoles" class="img-fluid rounded" width="1000" height="1000">
-    </div>
-    <!-- Texte à droite -->
-    <div>
-      <h2>Les Premières Consoles</h2>
-      <p>
-        Les premières consoles de jeu, telles que la Magnavox Odyssey et l’Atari Pong, ont marqué une révolution dans le divertissement domestique des années 1970.
-
-<br><br>
-
-<strong>La Magnavox Odyssey</strong>, lancée en 1972, est reconnue comme la première console de jeux vidéo domestique. Elle se connectait directement au téléviseur et proposait des jeux simples comme le tennis et le hockey. En raison de ses capacités graphiques limitéées, la console affichait uniquement quelques blocs blancs et une ligne verticale à l’écran. Pour enrichir l’expérience visuelle, Magnavox incluait des superpositions de couleurs translucides à placer sur l’écran, représentant différents décors et configurations de jeux. De plus, la console était accompagnée d’accessoires non électroniques tels que des dés, des cartes à jouer, de l’argent fictif et des jetons de poker, visant à imiter les jeux physiques de l’époque. ￼
-
-<br><br>
-
-<strong>L’Atari Pong</strong>, lancé en 1972, est l’un des premiers jeux vidéo commerciaux à succès. Inspiré du jeu “Table Tennis” de la Magnavox Odyssey, Pong a été développé par Atari et est rapidement devenu un phénomène culturel, contribuant à populariser les jeux vidéo auprès du grand public. ￼
-
-Ces premières consoles ont jeté les bases de l’industrie du jeu vidéo, ouvrant la voie à des avancées technologiques majeures et à une évolution rapide du secteur.<br><br>
-      </p>
-    </div>
-  </section>
-
-  <section class="fade-in d-flex">
-    <!-- Texte à gauche -->
-    <div class="me-4">
-        <h2>Évolution</h2>
-        <p>
-          L'évolution technologique a métamorphosé les jeux vidéo, les transformant en expériences immersives et interactives. Des graphismes en 3D réalistes à la réalité virtuelle, les avancées constantes permettent aux développeurs de créer des mondes virtuels captivants, offrant aux joueurs des aventures inoubliables et une immersion totale.
-        </p>
-        <p>
-          <strong>Des graphismes en 3D aux mondes virtuels immersifs</strong><br>
-          Dans les années 1990, l'introduction des graphismes en 3D a marqué un tournant majeur. Des jeux comme <em>Super Mario 64</em> ont ouvert la voie à des environnements tridimensionnels interactifs, offrant une profondeur et une liberté de mouvement inédites.
-        </p>
-        <p>
-          Au fil des années, les graphismes ont évolué vers un réalisme époustouflant. Des titres tels que <em>The Witcher 3: Wild Hunt</em> et <em>Red Dead Redemption 2</em> ont démontré la capacité des jeux à recréer des mondes détaillés et vivants, avec des personnages et des environnements d'une richesse inégalée.
-        </p>
-        <p>
-          <strong>L'émergence de la réalité virtuelle</strong><br>
-          Parallèlement, la réalité virtuelle (RV) a émergé, offrant une immersion totale. Des casques comme l'Oculus Rift et le HTC Vive permettent aux joueurs de s'immerger dans des univers virtuels, interagissant avec l'environnement de manière naturelle. Des jeux tels que <em>Beat Saber</em> exploitent pleinement le potentiel de la RV, transformant l'expérience de jeu en une activité physique et sensorielle.
-        </p>
-        <p>
-          <strong>L'avenir des jeux vidéo</strong><br>
-          Aujourd'hui, les jeux vidéo continuent d'évoluer, intégrant des technologies avancées comme le ray tracing, qui simule le comportement réaliste de la lumière, et la 4K, offrant des résolutions ultra-hautes. Ces innovations promettent des expériences encore plus immersives et réalistes, repoussant sans cesse les limites du divertissement interactif.
-        </p>
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="caption header-text">
+            <h6>Bienvenue sur</h6>
+            <h2 class="typewriter">L'Invention du Jeu Vidéo</h2>
+            <p>Découvrez l'histoire et l'évolution des jeux vidéo, des premières expérimentations aux consoles modernes. Explorez les technologies qui ont façonné cette industrie fascinante.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2">
+          <div class="right-image">
+            <img src="assets/origine.jpg" alt="Origines du Jeu Vidéo">
+          </div>
+        </div>
       </div>
-    <!-- Image à droite agrandie -->
-    <div>
-      <img src="assets/evolution.jpg" alt="Évolution Technologique" class="img-fluid rounded" width="500" height="500">
     </div>
-  </section>
-  
-</main>
+  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Histoire</h6>
+            <h2>Origines</h2>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <p>
+            L'invention du jeu vidéo remonte aux années 1950, période où des chercheurs universitaires ont commencé à explorer les possibilités offertes par les technologies émergentes. En 1958, le physicien William Higinbotham a créé "Tennis for Two", un jeu interactif affiché sur un oscilloscope, permettant aux visiteurs de simuler une partie de tennis en temps réel.
+          </p>
+          <p>
+            En 1952, Christopher Strachey, directeur du laboratoire de programmation de l'Université d'Edimbourg, a développé "OXO", une version électronique du jeu de morpion, marquant l'un des premiers jeux informatiques à utiliser un affichage électronique.
+          </p>
+          <p>
+            Ces premières expérimentations ont jeté les bases de l'industrie du jeu vidéo, qui allait connaître une croissance exponentielle dans les décennies suivantes, captivant des millions de joueurs à travers le monde.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb">
+              <img src="assets/images/trending-01.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section most-played">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Histoire</h6>
+            <h2>Les Premières Consoles</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb">
+              <img src="assets/consoles.png" alt="Les Premières Consoles">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <p>
+            Les premières consoles de jeu, telles que la Magnavox Odyssey et l'Atari Pong, ont marqué une révolution dans le divertissement domestique des années 1970.
+          </p>
+          <p>
+            <strong>La Magnavox Odyssey</strong>, lancée en 1972, est reconnue comme la première console de jeux vidéo domestique. Elle se connectait directement au téléviseur et proposait des jeux simples comme le tennis et le hockey. En raison de ses capacités graphiques limitées, la console affichait uniquement quelques blocs blancs et une ligne verticale à l'écran. Pour enrichir l'expérience visuelle, Magnavox incluait des superpositions de couleurs translucides à placer sur l'écran.
+          </p>
+          <p>
+            <strong>L'Atari Pong</strong>, lancé en 1972, est l'un des premiers jeux vidéo commerciaux à succès. Inspiré du jeu "Table Tennis" de la Magnavox Odyssey, Pong a été développé par Atari et est rapidement devenu un phénomène culturel, contribuant à populariser les jeux vidéo auprès du grand public.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Technologies</h6>
+            <h2>Évolution</h2>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <p>
+            L'évolution technologique a métamorphosé les jeux vidéo, les transformant en expériences immersives et interactives. Des graphismes en 3D réalistes à la réalité virtuelle, les avancées constantes permettent aux développeurs de créer des mondes virtuels captivants, offrant aux joueurs des aventures inoubliables et une immersion totale.
+          </p>
+          <p>
+            <strong>Des graphismes en 3D aux mondes virtuels immersifs</strong><br>
+            Dans les années 1990, l'introduction des graphismes en 3D a marqué un tournant majeur. Des jeux comme <em>Super Mario 64</em> ont ouvert la voie à des environnements tridimensionnels interactifs, offrant une profondeur et une liberté de mouvement inédites.
+          </p>
+          <p>
+            <strong>L'émergence de la réalité virtuelle</strong><br>
+            Parallèlement, la réalité virtuelle (RV) a émergé, offrant une immersion totale. Des casques comme l'Oculus Rift et le HTC Vive permettent aux joueurs de s'immerger dans des univers virtuels, interagissant avec l'environnement de manière naturelle.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb">
+              <img src="assets/evolution.jpg" alt="Évolution Technologique">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Envie de plus ?</h6>
+                  <h2>Explore notre <em>site</em> pour en savoir plus!</h2>
+                </div>
+                <p>Navigue à travers le site pour découvrir l'histoire complète des jeux vidéo, des anecdotes intéressantes, et même essayer quelques mini-jeux.</p>
+                <div class="main-button">
+                  <a href="anecdotes.html">Voir les Anecdotes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>MINI-JEU</h6>
+                  <h2>Essaye notre <em>mini-jeu</em> pour revivre l'expérience de l'un des premiers jeux vidéo!</h2>
+                </div>
+                <div class="main-button">
+                  <a href="jeu.html">Jouer maintenant</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>© 2023 L'Invention du Jeu Vidéo - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
 </body>
 </html>
